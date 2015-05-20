@@ -1,0 +1,38 @@
+{
+  "name": "teemo",
+  "version": "1.0.0",
+  "description": "The swift scouting tool!",
+  "license": "MIT",
+  "author": {
+    "name": "Christopher Brew",
+    "email": "cpbrew89@gmail.com"
+  },
+  "homepage": "https://github.com/cpbrew/teemo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cpbrew/teemo"
+  },
+  "bugs": {
+    "url": "https://github.com/cpbrew/teemo/issues"
+  },
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node --harmony ./bin/www",
+    "jshint": "./node_modules/.bin/jshint *.js routes/ public/javascripts/ bin/",
+    "jscs": "./node_modules/.bin/jscs *.js routes/ public/javascripts/ bin/",
+    "style": "npm run jscs && npm run jshint"
+  },
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "cookie-parser": "^1.3.5",
+    "debug": "^2.2.0",
+    "ect": "^0.5.9",
+    "express": "~4.12.2",
+    "morgan": "^1.5.3"
+  },
+  "devDependencies": {
+    "jscs": "^1.13.1",
+    "jshint": "^2.7.0"
+  }
+}
