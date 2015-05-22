@@ -8,7 +8,7 @@ let express = require('express'),
     ect = require('ect');
 
 let routes = require('./routes/index'),
-    users = require('./routes/users');
+    summoner = require('./routes/summoner');
 
 let app = express(),
     ECT = ect({ watch: true,
@@ -22,13 +22,13 @@ app.set('view engine', 'ect');
 app.engine('ect', ECT.render);
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(logger('dev'));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/summoner', summoner);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -45,11 +45,10 @@ if (app.get('env') === 'development') {
   app.use((err, req, res, next) => {
     // jshint unused: false
     res.status(err.status || 500);
-    res.render('index', {
-      title: 'Error',
-      iconUrl: 'images/error.png',
-      summonerName: err.message,
-      summonerLevel: res.statusCode
+    res.render('error', {
+      title: res.statusCode + '!',
+      errorCode: res.statusCode,
+      errorMessage: err.message
     });
   });
 }
@@ -59,11 +58,10 @@ if (app.get('env') === 'development') {
 app.use((err, req, res, next) => {
   // jshint unused: false
   res.status(err.status || 500);
-  res.render('index', {
-    title: 'Error',
-    iconUrl: 'images/error.png',
-    summonerName: err.message,
-    summonerLevel: res.statusCode
+  res.render('error', {
+    title: res.statusCode + '!',
+    errorCode: res.statusCode,
+    errorMessage: err.message
   });
 });
 

@@ -1,8 +1,90 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  background-color: #000000;
+  color: #FFFFFF;
 }
-#profileicon {
+
+#profile-icon {
   float: left;
   margin-right: 20px;
+}
+
+#index-body {
+  width: 1215px;
+  height: 717px;
+
+  background: url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg");
+
+  margin: 0 auto;
+}
+
+#main-box {
+  padding-top: 20px;
+  padding-left: 20px;
+
+  width: 500px;
+}
+
+#greeting {
+  color: #FFFF00;
+  font-size: 42px;
+}
+
+#lookup-form {
+  background-color: #FFFFFF;
+  height: 40px
+}
+
+#lookup-box {
+  width: 392px;
+  height: 30px;
+  border: none;
+  padding: 5px 0px 5px 8px;
+
+  float: left;
+
+  font-size: 22px;
+}
+
+#lookup-button {
+  width: 100px;
+  height: 100%;
+  border: none;
+  padding: 0px;
+
+  float: right;
+
+  font-size: 22px;
+  background-color: #41BADD;
+  color: #FFFFFF;
+}
+
+#error-container {
+  width: 40%;
+}
+
+#dead-teemo {
+  float: right;
+  width: 60%
+}
+
+#error-icon {
+  height: 128px;
+  width: 128px;
+  float: left;
+  padding-right: 10px;
+}
+
+#error-code {
+  height: 128px;
+  font-size: 128px;
+  line-height: 128px;
+}
+
+#error-message {
+  font-size: 42px;
+  word-wrap: break-word;
+  padding-top: 6px;
 }

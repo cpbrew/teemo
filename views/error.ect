@@ -1,6 +1,8 @@
 <% extend 'layout' %>
 
-block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+<img id="dead-teemo" src="../images/dead.jpg" />
+<div id="error-container">
+  <img id="error-icon" src="../images/error.png" />
+  <div id="error-code"><%- @errorCode %></div>
+  <div id="error-message"><%- @errorMessage %></div>
+</div>
