@@ -1,8 +1,12 @@
 body {
+  margin: 0px;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-
+  background: url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg");
+  background-repeat: no-repeat;
+  background-position: center 50px;
   background-color: #000000;
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
 }
 
@@ -14,8 +18,6 @@ body {
 #index-body {
   width: 1215px;
   height: 717px;
-
-  background: url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg");
 
   margin: 0 auto;
 }
