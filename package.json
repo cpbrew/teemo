@@ -21,7 +21,7 @@
     "start": "node --harmony ./bin/www",
     "jshint": "./node_modules/.bin/jshint *.js routes/ public/javascripts/ bin/",
     "jscs": "./node_modules/.bin/jscs *.js routes/ public/javascripts/ bin/",
-    "style": "npm run jscs && npm run jshint"
+    "style": "npm run jshint && npm run jscs"
   },
   "dependencies": {
     "body-parser": "^1.12.4",

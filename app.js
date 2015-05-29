@@ -5,21 +5,21 @@ let express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
-    ect = require('ect');
+    ect = require('ect'),
 
-let routes = require('./routes/index'),
-    summoner = require('./routes/summoner');
+    routes = require('./routes/index'),
+    summoner = require('./routes/summoner'),
 
-let app = express(),
-    ECT = ect({ watch: true,
-                root: path.join(__dirname, 'views'),
-                ext: '.ect'
-              });
+    app = express(),
+    ectRenderer = ect({ watch: true,
+                        root: path.join(__dirname, 'views'),
+                        ext: '.ect'
+                      });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ect');
-app.engine('ect', ECT.render);
+app.engine('ect', ectRenderer.render);
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());

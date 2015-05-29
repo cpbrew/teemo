@@ -1,6 +1,9 @@
 {
   "preset": "airbnb",
   "disallowMultipleVarDecl": null,
+  "disallowKeywordsOnNewLine": ["else", "catch"],
+  "disallowTrailingWhitespace": "ignoreEmptyLines",
+  "disallowQuotedKeysInObjects": "allButReserved",
   "disallowTrailingWhitespace": "ignoreEmptyLines",
   "requireCurlyBraces": [
     "if",
